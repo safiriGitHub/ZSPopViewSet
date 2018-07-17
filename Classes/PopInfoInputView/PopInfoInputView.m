@@ -9,7 +9,7 @@
 #define BtnConfirmTag            104
 #define BtnCancelTag             105
 #import "PopInfoInputView.h"
-#import <Masonry/Masonry.h>
+#import "Masonry.h"
 
 @interface PopInfoInputView ()
 
