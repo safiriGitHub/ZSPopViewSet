@@ -117,6 +117,7 @@ Pod::Spec.new do |s|
     infoInputView.source_files = "Classes/PopInfoInputView/**/*.{h,m}"
     infoInputView.dependency 'ZSPopViewSet/ZSPopBase'
     infoInputView.dependency 'Masonry'
+    infoInputView.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/Masonry"}
   end
 
   # s.subspec 'PopFSCalendarView' do |fSCalendarView|

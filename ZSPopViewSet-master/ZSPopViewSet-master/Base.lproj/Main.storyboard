@@ -57,6 +57,14 @@
                                     <action selector="PopInfoInputClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4HA-Dr-X0A"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f95-HF-jKs">
+                                <rect key="frame" x="33" y="398" width="89" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="PopCalendar"/>
+                                <connections>
+                                    <action selector="PopCalendarButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vFy-fV-2I6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>

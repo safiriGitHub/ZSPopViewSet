@@ -11,8 +11,9 @@
 #import "PopInfoTextView.h"
 #import "PopInfoImageView.h"
 #import "PopInfoInputView.h"
+#import "PopFSCalendarView.h"
 
-@interface ViewController ()<PopShowImageViewDelegate, PopInfoInputViewDelegate>
+@interface ViewController ()<PopShowImageViewDelegate, PopInfoInputViewDelegate,PopFSCalendarViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *pandaImageView;
 
@@ -92,7 +93,21 @@
 - (void)popInfoInputViewCancel {
     NSLog(@"popInfoInputViewCancel");
 }
+- (IBAction)PopCalendarButtonClick:(id)sender {
+    CGFloat width = self.view.frame.size.width * 0.9;
+    PopFSCalendarView *popCalendarView = [[PopFSCalendarView alloc] initWithSize:CGSizeMake(width, width)];
+    popCalendarView.bgShadowType = ShadowTypeEffect;
+    popCalendarView.popCalendarDelegate = self;
+    [popCalendarView.confirmButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [popCalendarView.cancelButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [popCalendarView showInView:self.view centerAtPoint:CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/2-20) duration:0.5f completion:^{
+        NSLog(@"PopFSCalendarView show complete");
+    }];
+}
 
+- (void)confirmCanlendarSelectDate:(NSDate *)selectDate {
+    NSLog(@"selectDate = %@",selectDate.description);
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

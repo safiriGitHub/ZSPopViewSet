@@ -13,7 +13,7 @@
 		03C0596C20F43E9900B005B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03C0596B20F43E9900B005B9 /* Assets.xcassets */; };
 		03C0596F20F43E9900B005B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C0596D20F43E9900B005B9 /* LaunchScreen.storyboard */; };
 		03C0597220F43E9900B005B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C0597120F43E9900B005B9 /* main.m */; };
-		03C0598620F43EC300B005B9 /* ZSPopFSCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C0597D20F43EC300B005B9 /* ZSPopFSCalendarView.m */; };
+		03C0598620F43EC300B005B9 /* PopFSCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C0597D20F43EC300B005B9 /* PopFSCalendarView.m */; };
 		03C0598720F43EC300B005B9 /* PopInfoImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C0597E20F43EC300B005B9 /* PopInfoImageView.m */; };
 		03C0598820F43EC300B005B9 /* PopInfoInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C0598020F43EC300B005B9 /* PopInfoInputView.m */; };
 		03C0598920F43EC300B005B9 /* PopInfoTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C0598120F43EC300B005B9 /* PopInfoTextView.m */; };
@@ -36,13 +36,13 @@
 		03C0597A20F43EC300B005B9 /* PopInfoImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopInfoImageView.h; sourceTree = "<group>"; };
 		03C0597B20F43EC300B005B9 /* PopInfoInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopInfoInputView.h; sourceTree = "<group>"; };
 		03C0597C20F43EC300B005B9 /* ZSPopCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSPopCustomView.h; sourceTree = "<group>"; };
-		03C0597D20F43EC300B005B9 /* ZSPopFSCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSPopFSCalendarView.m; sourceTree = "<group>"; };
+		03C0597D20F43EC300B005B9 /* PopFSCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopFSCalendarView.m; sourceTree = "<group>"; };
 		03C0597E20F43EC300B005B9 /* PopInfoImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopInfoImageView.m; sourceTree = "<group>"; };
 		03C0597F20F43EC300B005B9 /* PopInfoTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopInfoTextView.h; sourceTree = "<group>"; };
 		03C0598020F43EC300B005B9 /* PopInfoInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopInfoInputView.m; sourceTree = "<group>"; };
 		03C0598120F43EC300B005B9 /* PopInfoTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopInfoTextView.m; sourceTree = "<group>"; };
 		03C0598220F43EC300B005B9 /* ZSPopCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSPopCustomView.m; sourceTree = "<group>"; };
-		03C0598420F43EC300B005B9 /* ZSPopFSCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSPopFSCalendarView.h; sourceTree = "<group>"; };
+		03C0598420F43EC300B005B9 /* PopFSCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopFSCalendarView.h; sourceTree = "<group>"; };
 		03C0598C20F45FE900B005B9 /* ZSPopBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSPopBaseView.h; sourceTree = "<group>"; };
 		03C0598D20F45FE900B005B9 /* ZSPopBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSPopBaseView.m; sourceTree = "<group>"; };
 		07D75255B71412FB37B77493 /* libPods-ZSPopViewSet-master.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZSPopViewSet-master.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,8 +92,8 @@
 		039B93AA20FDC0E0006DA0C6 /* PopFSCalendarView */ = {
 			isa = PBXGroup;
 			children = (
-				03C0598420F43EC300B005B9 /* ZSPopFSCalendarView.h */,
-				03C0597D20F43EC300B005B9 /* ZSPopFSCalendarView.m */,
+				03C0598420F43EC300B005B9 /* PopFSCalendarView.h */,
+				03C0597D20F43EC300B005B9 /* PopFSCalendarView.m */,
 			);
 			path = PopFSCalendarView;
 			sourceTree = "<group>";
@@ -268,7 +268,7 @@
 			files = (
 				03C0596720F43E9800B005B9 /* ViewController.m in Sources */,
 				03C0598A20F43EC300B005B9 /* ZSPopCustomView.m in Sources */,
-				03C0598620F43EC300B005B9 /* ZSPopFSCalendarView.m in Sources */,
+				03C0598620F43EC300B005B9 /* PopFSCalendarView.m in Sources */,
 				03C0598920F43EC300B005B9 /* PopInfoTextView.m in Sources */,
 				03C0597220F43E9900B005B9 /* main.m in Sources */,
 				03C0598820F43EC300B005B9 /* PopInfoInputView.m in Sources */,
