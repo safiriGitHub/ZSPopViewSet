@@ -7,7 +7,7 @@
 //
 
 #import "ZSPopBaseView.h"
-#import "FSCalendar.h"
+#import <FSCalendar/FSCalendar.h>
 
 @protocol PopFSCalendarViewDelegate <NSObject>
 
