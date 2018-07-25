@@ -120,9 +120,11 @@ Pod::Spec.new do |s|
     infoInputView.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/Masonry"}
   end
 
-  # s.subspec 'PopFSCalendarView' do |fSCalendarView|
-  #   fSCalendarView.source_files = "Classes/PopFSCalendarView/**/*.{h,m}"
-  # end
+  s.subspec 'PopFSCalendarView' do |fSCalendarView|
+    fSCalendarView.source_files = "Classes/PopFSCalendarView/**/*.{h,m}"
+    fSCalendarView.dependency 'FSCalendar'
+    fSCalendarView.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/FSCalendar"}
+  end
 
   # s.public_header_files = "Classes/**/*.h"
 
