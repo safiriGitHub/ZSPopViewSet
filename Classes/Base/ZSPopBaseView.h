@@ -82,7 +82,10 @@ typedef NS_ENUM(NSUInteger, ShowAnimationType) {
  */
 @property (nonatomic ,assign) BOOL canRemoveSelfByTapSelfView;
 
-
+/**
+ 调整自己的Frame字段
+ */
+@property (nonatomic ,assign) CGRect adjustFrame;
 
 /**
  弹出视图背景样式

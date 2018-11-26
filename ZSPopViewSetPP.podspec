@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "ZSPopViewSet"
-  s.version      = "0.0.4"
+  s.name         = "ZSPopViewSetPP"
+  s.version      = "0.0.3"
   s.summary      = "APP内动画弹出自定义View，类似于UIAlert。"
 
   # This description is used to generate tags and improve search results.
@@ -85,7 +85,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://gitee.com/safiri/ZSPopViewSet.git", :tag => "#{s.version}" }
+  s.source       = { :git => "http://zhangshuai@192.168.1.70:10101/r/iOS/cocoaPods/ZSPopViewSet.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -105,24 +105,24 @@ Pod::Spec.new do |s|
 
   s.subspec 'PopInfoTextView' do |infoTextView|
     infoTextView.source_files = "Classes/PopInfoTextView/**/*.{h,m}"
-    infoTextView.dependency 'ZSPopViewSet/ZSPopBase'
+    infoTextView.dependency 'ZSPopViewSetPP/ZSPopBase'
   end
 
   s.subspec 'PopInfoImageView' do |infoImageView|
     infoImageView.source_files = "Classes/PopInfoImageView/**/*.{h,m}"
-    infoImageView.dependency 'ZSPopViewSet/ZSPopBase'
+    infoImageView.dependency 'ZSPopViewSetPP/ZSPopBase'
   end
 
   s.subspec 'PopInfoInputView' do |infoInputView|
     infoInputView.source_files = "Classes/PopInfoInputView/**/*.{h,m}"
-    infoInputView.dependency 'ZSPopViewSet/ZSPopBase'
+    infoInputView.dependency 'ZSPopViewSetPP/ZSPopBase'
     infoInputView.dependency 'Masonry'
     infoInputView.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/Masonry"}
   end
 
   s.subspec 'PopFSCalendarView' do |fsCalendarView|
     fsCalendarView.source_files = "Classes/PopFSCalendarView/**/*.{h,m}"
-    fsCalendarView.dependency 'ZSPopViewSet/ZSPopBase'
+    fsCalendarView.dependency 'ZSPopViewSetPP/ZSPopBase'
     fsCalendarView.dependency 'FSCalendar'
     fsCalendarView.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/FSCalendar"}
   end

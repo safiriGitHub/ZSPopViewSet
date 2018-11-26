@@ -16,7 +16,6 @@
 @property (nonatomic ,copy) void (^animationCompletion)(void);
 @property (nonatomic ,assign) CGFloat animationDuration;
 @property (nonatomic ,assign) CGSize originSize;
-@property (nonatomic ,assign) CGRect adjustFrame;
 
 @end
 
