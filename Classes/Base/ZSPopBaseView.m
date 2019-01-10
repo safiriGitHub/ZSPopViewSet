@@ -29,7 +29,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         _originSize = frame.size;
-        _adjustFrame = frame;
         _tapBgViewAutoHide = YES;
         _grayBackgroundAlpha = 0.35f;
     }
@@ -107,8 +106,23 @@
                              }
                          }];
     }else if (self.showAnimationType == ShowTypeHeightGrow) {
-        CGRect toFrame = self.adjustFrame;
+        CGRect toFrame = self.frame;
         self.frame = CGRectMake(toFrame.origin.x, toFrame.origin.y, toFrame.size.width, 0);
+        [UIView animateWithDuration:self.animationDuration
+                              delay:0.0
+                            options:0
+                         animations:^{
+                             self.frame = toFrame;
+                         }
+                         completion:^(BOOL finished) {
+                             if (self.animationCompletion) {
+                                 self.animationCompletion();
+                             }
+                         }];
+    }
+    else if (self.showAnimationType == ShowTypeBottomFlowup) {
+        CGRect toFrame = self.frame;
+        self.frame = CGRectMake(toFrame.origin.x, containerView.frame.size.height, toFrame.size.width, toFrame.size.height);
         [UIView animateWithDuration:self.animationDuration
                               delay:0.0
                             options:0
@@ -133,12 +147,29 @@
           position:(CGPoint)position
           duration:(CGFloat)waitDuration
         completion:(void (^)(void))block {
-    CGRect frame = self.adjustFrame;
+    CGRect frame = self.frame;
     frame.origin.x = position.x;
     frame.origin.y = position.y;
     self.frame = frame;
-    self.adjustFrame = frame;
     [self showInView:containerView duration:waitDuration completion:block];
+}
+#pragma mark - adjust
+- (void)adjustFrame:(CGRect)frame animation:(BOOL)animation {
+    [self adjustFrame:frame animation:animation duration:0.5f completion:nil];
+}
+- (void)adjustFrame:(CGRect)frame animation:(BOOL)animation duration:(CGFloat)duration completion:(void (^)(void))completion {
+    if (!animation) duration = 0;
+    [UIView animateWithDuration:duration
+                          delay:0.0
+                        options:0
+                     animations:^{
+                         self.frame = frame;
+                     }
+                     completion:^(BOOL finished) {
+                         if (completion) {
+                             completion();
+                         }
+                     }];
 }
 
 #pragma mark - actions gestures

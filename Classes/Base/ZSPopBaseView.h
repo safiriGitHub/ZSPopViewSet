@@ -29,10 +29,12 @@ typedef NS_ENUM(NSUInteger, BgShadowType) {
  
  - ShowTypeTransformScale: 放大浮现
  - ShowTypeHeightGrow: 高度增加，类似从上到下移动
+ - ShowTypeBottomFlowup: 从底部出现
  */
 typedef NS_ENUM(NSUInteger, ShowAnimationType) {
     ShowTypeTransformScale,
-    ShowTypeHeightGrow
+    ShowTypeHeightGrow,
+    ShowTypeBottomFlowup
 };
 
 
@@ -83,11 +85,6 @@ typedef NS_ENUM(NSUInteger, ShowAnimationType) {
 @property (nonatomic ,assign) BOOL canRemoveSelfByTapSelfView;
 
 /**
- 调整自己的Frame字段
- */
-@property (nonatomic ,assign) CGRect adjustFrame;
-
-/**
  弹出视图背景样式
  */
 @property (nonatomic ,assign) BgShadowType bgShadowType;
@@ -136,6 +133,13 @@ typedef NS_ENUM(NSUInteger, ShowAnimationType) {
 
 // MARK: init
 - (instancetype)initWithSize:(CGSize)size;
+
+// MARK: adjust
+/**
+ 调整自己的Frame字段
+ */
+- (void)adjustFrame:(CGRect)frame animation:(BOOL)animation;
+- (void)adjustFrame:(CGRect)frame animation:(BOOL)animation duration:(CGFloat)duration completion:(void (^)(void))completion;
 
 // MARK: remove
 - (void)removeSelfAndBgViewFromSuperview;

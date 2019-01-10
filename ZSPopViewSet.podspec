@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ZSPopViewSet"
-  s.version      = "0.0.4"
-  s.summary      = "APP内动画弹出自定义View，类似于UIAlert。"
+  s.version      = "0.0.6"
+  s.summary      = "APP内自定义动画弹出View"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
