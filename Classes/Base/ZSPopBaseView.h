@@ -139,7 +139,7 @@ typedef NS_ENUM(NSUInteger, ShowAnimationType) {
  调整自己的Frame字段
  */
 - (void)adjustFrame:(CGRect)frame animation:(BOOL)animation;
-- (void)adjustFrame:(CGRect)frame animation:(BOOL)animation duration:(CGFloat)duration completion:(void (^)(void))completion;
+- (void)adjustFrame:(CGRect)frame animation:(BOOL)animation duration:(CGFloat)duration delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options completion:(void (^)(BOOL finished))completion;
 
 // MARK: remove
 - (void)removeSelfAndBgViewFromSuperview;

@@ -155,21 +155,17 @@
 }
 #pragma mark - adjust
 - (void)adjustFrame:(CGRect)frame animation:(BOOL)animation {
-    [self adjustFrame:frame animation:animation duration:0.5f completion:nil];
+    [self adjustFrame:frame animation:animation duration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut completion:nil];
 }
-- (void)adjustFrame:(CGRect)frame animation:(BOOL)animation duration:(CGFloat)duration completion:(void (^)(void))completion {
+- (void)adjustFrame:(CGRect)frame animation:(BOOL)animation duration:(CGFloat)duration delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options completion:(void (^)(BOOL finished))completion {
     if (!animation) duration = 0;
     [UIView animateWithDuration:duration
-                          delay:0.0
-                        options:0
+                          delay:delay
+                        options:options
                      animations:^{
                          self.frame = frame;
                      }
-                     completion:^(BOOL finished) {
-                         if (completion) {
-                             completion();
-                         }
-                     }];
+                     completion:completion];
 }
 
 #pragma mark - actions gestures

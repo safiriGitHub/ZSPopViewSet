@@ -117,9 +117,7 @@
     [popFlowupView showInView:self.view duration:0.5f completion:^{
         NSLog(@"popFlowupView show complete");
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [popFlowupView adjustFrame:CGRectMake(0, 200, self.view.frame.size.width, 200) animation:YES duration:0.5f completion:^{
-                NSLog(@"popFlowupView adjust complete");
-            }];
+            [popFlowupView adjustFrame:CGRectMake(0, 200, self.view.frame.size.width, 200) animation:YES];
         });
     }];
     
