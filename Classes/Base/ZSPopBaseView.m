@@ -30,7 +30,7 @@
     if (self) {
         _originSize = frame.size;
         _tapBgViewAutoHide = YES;
-        _grayBackgroundAlpha = 0.35f;
+        _grayBackgroundAlpha = 0.55f;
     }
     return self;
 }
@@ -47,7 +47,7 @@
         self.bgShadowType == ShadowTypeClear) {
         _grayBackgroundView = [[UIView alloc] initWithFrame:containerView.bounds];
         _grayBackgroundView.tag = GrayBGViewTag;
-        _grayBackgroundView.backgroundColor = [UIColor lightGrayColor];
+        _grayBackgroundView.backgroundColor = [UIColor darkGrayColor];
         _grayBackgroundView.alpha = self.grayBackgroundAlpha;
         if (self.bgShadowType == ShadowTypeClear) {
             _grayBackgroundView.backgroundColor = [UIColor clearColor];
