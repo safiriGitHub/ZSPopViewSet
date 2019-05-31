@@ -13,6 +13,7 @@ PopFSCalendarView：基于ZSPopBaseView，弹出日历View及相关功能。
 
 0.0.6: 添加显示后调整frame方法；添加从容器view底部弹出的动画
 0.0.7: 优化显示后调整frame方法
+0.0.8: 调整 ZSPopBaseView.m 中背景灰度
 
 #### 安装教程
 
