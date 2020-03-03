@@ -65,6 +65,10 @@ typedef enum {
     return _contentView;
 }
 - (void)setCustomView:(UIView *)customView {
+    if (_customView) {
+        [_customView removeFromSuperview];
+        _customView = nil;
+    }
     _customView = customView;
     self.contentView.frame = customView.frame;
     [self.contentView addSubview:_customView];
