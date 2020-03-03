@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   PopFSCalendarView：基于ZSPopBaseView，弹出日历View及相关功能。
                    DESC
 
-  s.homepage     = "https://gitee.com/safiri"
+  s.homepage     = "https://github.com/safiriGitHub/ZSPopViewSet"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
