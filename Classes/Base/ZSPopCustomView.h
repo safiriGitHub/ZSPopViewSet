@@ -30,7 +30,10 @@
 @property (nonatomic ,strong) UIColor *gradientEndColor;
 ///是否使用梯度颜色
 @property (nonatomic ,assign) BOOL useGradientColor;
-
+///调整x方向位置 正数右移
+@property (nonatomic, assign) CGFloat adjsutXPosition;
+///调整y方向位置 正数下移
+@property (nonatomic, assign) CGFloat adjsutYPosition;
 
 ///用在有箭头的情况 showArrow = YES
 - (void)showCustomViewInView:(UIView *)view

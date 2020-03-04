@@ -119,6 +119,8 @@ typedef enum {
         //_arrowPosition = MAX(16, MIN(_arrowPosition, contentSize.width - 16));
         _contentView.frame = (CGRect){0, self.kArrowSize, contentSize};
         
+        point.x = point.x + self.adjsutXPosition;
+        
         self.frame = (CGRect) {
             
             point,
@@ -142,6 +144,8 @@ typedef enum {
         
         _arrowPosition = rectXM - point.x;
         _contentView.frame = (CGRect){CGPointZero, contentSize};
+        
+        point.x = point.x + self.adjsutXPosition;
         
         self.frame = (CGRect) {
             
@@ -167,6 +171,8 @@ typedef enum {
         _arrowPosition = rectYM - point.y;
         _contentView.frame = (CGRect){self.kArrowSize, 0, contentSize};
         
+        point.y = point.y + self.adjsutYPosition;
+        
         self.frame = (CGRect) {
             
             point,
@@ -190,6 +196,8 @@ typedef enum {
         
         _arrowPosition = rectYM - point.y;
         _contentView.frame = (CGRect){CGPointZero, contentSize};
+        
+        point.y = point.y + self.adjsutYPosition;
         
         self.frame = (CGRect) {
             
